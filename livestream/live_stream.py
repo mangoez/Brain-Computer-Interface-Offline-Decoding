@@ -178,7 +178,7 @@ class Graph:
                 DataFilter.perform_bandstop(data[channel], BoardShim.get_sampling_rate(args.board_id), 50, 2, 8,
                                             FilterTypes.BUTTERWORTH.value, 0)
                 self.curves[count+1].setData(data[channel][-1001:].tolist())
-
+        
             window = data[0:8, -250:] # input window
             window = window - window[3, :] # Cz reference
 
@@ -390,7 +390,6 @@ if __name__ == '__main__':
     UDP_PORT = 1234 
     sock = socket.socket(socket.AF_INET, # Internet
                      socket.SOCK_DGRAM) # UDP
-    # sock.setblocking(False)
     
     fs = 250
     length = int(fs)
