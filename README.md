@@ -1,5 +1,6 @@
 # Brain-Computer-Interface-Offline-Decoding
 This project was aimed at classifying motor imagery from EEG data using machine learning to play a game like pong. 
+To do so, dataset IV from the 4th BCI competition was used.
 It is an asynchronous controller and outputs a motor imagery scale continuously. 
 This allows the user to perform an action at will and is not time-locked.
 
